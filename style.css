@@ -1,0 +1,636 @@
+/*убрал стрелки в номере*/
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+*{
+    font-family: "Avenir Next Cyr";
+}
+body{
+    margin: 0;
+}
+.header{
+    background: url(img/background.png) no-repeat;
+    color:#FFFFFF;
+}
+.header__cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    padding: 50px 0 0 0;
+}
+.header__draw{
+    text-transform: uppercase;
+}
+.header__draw p,span{
+    font-family: "Avenir Next Cyr bold";
+}
+.header__bg-red{
+    background: #E32819;
+}
+.header__connect p{
+    transform: rotate(-1.84deg);
+}
+.header__draw button{
+    background: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 31px;
+    cursor:pointer;
+}
+.header__give{
+    position: relative;
+}
+.header__give p{
+    margin: 0 0 40px 0;
+    font-size: 54px;
+    transform: rotate(-1.54deg);
+}
+.header__arrow{
+    position: absolute;
+}
+.header__iphone p{
+    font-size: 42px;
+    transform: rotate(-2.28deg);
+}
+.header__hyundai p{
+    font-size: 42px;
+}
+.header__btn button{
+    transition: all 0.3s ease 0s;
+}
+.header__btn button:hover{
+    background: #E32819;
+    color: #FFFFFF;
+}
+/*main часть*/
+.main{
+    margin: 90px 0 0 0;
+}
+.main__what__it__is{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap-reverse;
+    padding: 0 0 0 9%;
+}
+.main__about p{
+    font-size: 26px;
+    font-family:"Avenir Next Cyr";
+    margin: -15px 0 0 0;
+}
+.main__txt{
+    color: #2D3945;
+    font-weight: 800px;
+    font-size: 69px;
+    text-transform: uppercase;
+}
+.main__list ul{
+    list-style: url(img/Ellipse.png);
+}
+.main__list li{
+    padding: 20px 0;
+}
+.main__list li:last-child{
+    font-family: "Avenir Next Cyr bold";
+    color: #2D3945;
+}
+.main__color{
+    color: #2D3945;
+}
+.main__take__in{
+    text-align: center;
+    font-size: 34px;
+    color: #2D3945;
+    margin: 125px 0 50px 0;
+}
+.main__take__in p{
+    color: #2D3945;
+}
+.main__promotion{
+    margin: 70px 0 0 0;
+}
+.main__conditions{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 15%;
+    position: relative;
+}
+.main__color{
+    color: #2D3945;
+}
+.main__arrow{
+    position: absolute;
+    top: 125%;
+    left: 20%;
+}
+.main__first{
+    background: url(img/1.png) no-repeat;
+}
+.main__second{
+    background: url(img/2.png) no-repeat;
+}
+.main__treeth{
+    display: flex;
+    align-items: center;
+}
+.main__treeth a{
+    color: #CECECE;
+    text-decoration: underline;
+    padding: 4px 0 0 5px;
+}
+.main__reg{
+    display: flex;
+    justify-content: space-between;
+    margin: 108px auto;
+    width: 800px;
+    padding: 35px 10% 0;
+    background: rgba(32, 190, 198, 0.1) ;
+    border-radius: 20px;
+    height: 400px;
+}
+.main__reg-left{
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 15px 0;
+    text-align: center;
+    width: 400px;
+    margin: 0 0 90px 0;
+}
+.main__reg-left p{
+    color: #15394C;
+}
+.main__input{
+    padding: 10px 30px 10px;
+    border: 1px solid #15394C;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.main__btn-sign{
+    background: #ec948e;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 65px;
+    cursor:pointer;
+    margin: 18px 0 0 0;   
+    transition: all 0.3s ease 0s;
+}
+.main__btn-sign:hover{
+    background: rgba(32, 190, 198, 0.1);
+    color: #15394C;
+}
+.main__btns{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.main__google{
+    background: #DBDBDB;
+    border: none;
+    border-radius:5px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+.main__facebook{
+    padding: 8px 21px;
+    background: #1877F2;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+.main__apple{
+    padding: 8px 21px;
+    background: #000000;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+.main__reg-right{
+    padding: 0 0 0 50px;
+}
+.main__reg-right p:first-child{
+    color: #15394C;
+    font-family: "Avenir Next Cyr bold";
+    font-size: 24px;
+    font-weight: 800;
+}
+.main__time{
+    background: url(img/bg2.png) no-repeat;
+}
+.main__clock{
+    display: flex;
+    justify-content: center;
+}
+.main__clock p{
+    font-size: 13px;
+}
+.main__img p{
+    font-family: "Avenir Next Cyr";
+}   
+.main__oval{
+    width: 148px;
+    height: 48px;
+    background: #109EA7;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    right: 47%;
+    transform: rotate(64deg);
+    z-index: 0;
+}
+.main__oval p{
+    border: 0.5px solid #ffffff;
+    margin: 7px -7px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 5% 0;
+    font-size: 15px;
+    font-weight: normal;
+}
+.main__oval-2 p{
+    border: 0.5px solid #ffffff;
+    margin: 5px -7px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 5% 0;
+    font-size: 15px;
+    font-family: "Avenir Next Cyr"; 
+}
+.main__oval-2{
+    width: 148px;
+    height: 48px;
+    background: #109EA7;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    right: 31%;
+    transform: rotate(-30deg);
+}
+.main__img{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    position: relative;
+}
+.main__man,
+.main__woman,
+.main__phone,
+.main__back{
+    position: absolute;
+} 
+.main__car{
+    z-index: 3;
+    position: relative;
+}
+.main__phone{
+    z-index: 1;
+    right: 38%;
+    bottom: 21%;
+}
+.main__back{
+    right: 40%;
+    bottom: 34%;
+}
+.main__man{
+    z-index: 1;
+    bottom: 32%;
+    left: 16%;
+}
+.main__woman{
+    bottom: 32%;
+}
+.main__timer{
+    text-align: center;
+}
+.main__timer p{
+    color: #FFFFFF;
+}
+.main__p-first{
+    padding: 70px 0 0 0;
+    font-size: 60px;
+    font-family: "Avenir Next Cyr bold";
+    margin: 60px 0 32px;
+}
+.main__cont p:nth-child(2){
+    font-size: 24px;
+    padding: 0 0 20px 0;
+}
+.main__cont p{
+    font-family: "Avenir Next Cyr bold";
+}
+.main__clock span{
+    color: #FFFFFF;
+}
+.main__two__dots{
+    padding: 0 5px 0;
+}
+.main__bg-red{
+    background: #D8271C;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 3px;
+}
+/*footer часть*/
+footer{
+    margin: 195px 0 0 0;
+}
+.footer__bg{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 10% 0 0;
+}
+.footer__elka{
+    position: absolute;
+    z-index: 1;
+    left: 4%;
+}
+.footer__car{
+    position: absolute;
+    z-index: 2;
+    top: 107%;
+    left: 19%;
+}
+.footer__txt p{
+    font-size: 40px;
+    font-family: "Avenir Next Cyr bold";
+    color: #2D3945;
+}
+.footer__btn{
+    padding: 14px 55px;
+    background: #D8271C;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: all 0.3s ease 0s;
+}
+.footer__btn:hover{
+    background: #2a9610;
+}
+.footer__mountain{
+    position: relative;
+    height: 512px;
+}
+.footer__mountain-1,
+.footer__mountain-2{
+    position: absolute;
+}
+.footer__mountain-1{
+    width: 100%;
+}
+.footer__mountain-2{
+    top: 116px;
+    width: 100%;
+}
+.footer__rights{
+    text-align: center;
+}
+@media(max-width:1434px){
+    .main__tv img{
+        width: 600px;
+    }
+}
+@media(max-width:1188px){
+    .main__tv img{
+        width: 475px;
+    }
+    .main__conditions{
+        margin: 0 auto;
+        width: 400px;
+    }
+    .main__first{
+        margin: 40px 0 50px;
+    }
+    .main__second{
+        margin: 0 0 36px 0;
+    }
+    .main__arrow{
+        display: none;
+    }
+
+}
+@media(max-width:1011px){
+    .main__reg{
+        justify-content: center;
+
+    }
+    .main__what__it__is{
+        justify-content: center;
+    }
+    .main__reg{
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 400px;
+        height: 740px;
+    }
+    .main__reg-right{
+        text-align: center;
+        padding: 0;
+    }
+    .main__reg-right img{
+        width: 292px;
+    }
+}
+@media(max-width:1026px){
+    .header__group img{
+        width: 322px;
+    }
+    .main__img{
+        justify-content: center;
+        padding: 14% 10% 0;
+    }
+    .main__woman{
+        bottom: 26%;
+        left: 33%;
+        transform: rotate(-13deg);
+        width: 138px;
+    }
+    .main__man{
+        width: 164px;
+        bottom: 23%;
+        left:  49%;
+        transform: rotate(10deg);
+    }
+    .main__phone{
+        right: 50%;
+        bottom: 12%;
+        width: 149px;
+    }
+    .main__back{
+        right: 52%;
+        bottom: 22%;
+        width: 70px;
+    }
+    .main__car{
+        width: 300px;
+    }
+    .main__cont p{
+        font-size: 24px;
+    }
+    .footer__bg{
+        justify-content: center;
+        padding: 0;
+        text-align: center;
+    }
+    .footer__elka{
+        left: 7%;
+        top: 115%;
+        width: 310px;
+    }
+    .footer__car{
+        top: 192%;
+        left: 19%;
+        width: 282px;
+    }
+    .footer__mountain{
+        height: 400px;
+        margin: 5% 0 0 0;
+    }
+    .main__oval{
+        width: 111px;
+        height: 36px;
+        top: 4%;
+        right: 41%;
+        transform: rotate(2deg);
+    }
+    .main__oval p{
+        margin: 3px -5px;
+        width: 119px;
+    }
+    .main__oval-2{
+        width: 111px;
+        height: 36px;
+        top: 20%;
+        right: 49%;
+        transform: rotate(39deg);
+    }
+    .main__oval-2 p{
+        margin: 2px -5px;
+        width: 119px;
+    }
+}
+@media(max-width:870px){
+    .main__img{
+        padding: 17% 10% 0;
+    }
+    .main__man{
+        left:50%;
+    }
+    .main__woman{
+        left: 29%;
+    }
+}
+@media(max-width:745px){
+    .main__img{
+        padding: 19% 10% 0;
+    }
+    .main__woman{
+        left: 26%;
+    }
+}
+@media(max-width:630px){
+    .main__img{
+        padding: 23% 10% 0;
+    }
+    .main__woman{
+        left: 22%;
+    }
+}
+@media(max-width:550px){
+    .main__img{
+        padding: 26% 10% 0;
+    }
+    .main__woman{
+        left: 18%;
+    }
+}
+@media(max-width:462px){
+    .main__img{
+        padding: 30% 10% 0;
+    }
+    .main__oval{
+        right: 29%;
+    }
+    .main__woman{
+        left: 12%;
+    }
+}
+@media(max-width:614px){
+    .header__connect p{
+        font-size: 14px;
+    }
+    .header__give img:first-child{
+        width: 156px;
+    }
+    .header__arrow{
+        width: 54px;
+    }
+    .header__give p{
+        font-size: 30px;
+    }
+    .header__iphone p{
+        font-size: 24px;
+    }
+    .header__hyundai{
+        margin: 32px 0 0 0;
+    }
+    .header__hyundai p{
+        font-size: 24px;
+        transform: rotate(4.46deg);
+    }
+    .footer__txt p{
+        font-size: 24px;
+    }
+}
+@media(max-width:571px){
+    .main__what__it__is{
+        padding: 0 0 0 3%;
+    }
+    .main__tv img{
+        width: 350px;
+    }
+    .main__reg{
+        width: 300px;
+        padding: 35px 3% 0;
+    }
+    .main__conditions{
+        width: 300px;
+        padding: 0 3%;
+    }
+    .footer{
+        margin: 75px 0 0 0;
+    }
+    .footer__elka{
+        left: 0;
+    }
+    .footer__car{
+        top: 228%;
+        left: -4%;
+    }
+}
+@media(max-width:380px){
+    .main__img{
+        padding: 40% 10% 0;
+    }
+    .main__woman{
+        left: 2%;
+    }
+}
+@font-face {
+    font-family: "Avenir Next Cyr bold"; 
+    src: url("fonts/AvenirNextCyr-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+@font-face {
+    font-family: "Avenir Next Cyr"; 
+    src: url("fonts/AvenirNextCyr-Medium.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
