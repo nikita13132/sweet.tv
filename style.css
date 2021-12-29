@@ -1,11 +1,3 @@
-/*убрал стрелки в номере*/
-input[type='number'] {
-    -moz-appearance:textfield;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
 *{
     font-family: "Avenir Next Cyr";
 }
@@ -16,15 +8,28 @@ body{
     background: url(img/background.png) no-repeat;
     color:#FFFFFF;
 }
+.header__hidden{
+    display: none;
+}
 .header__cont{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align:center;
-    padding: 50px 0 0 0;
+    padding: 40px 0 0 0;
 }
-.header__draw{
+.header__connect,
+.header__give{
     text-transform: uppercase;
+}
+.header__connect{
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.header__connect._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 .header__draw p,span{
     font-family: "Avenir Next Cyr bold";
@@ -33,32 +38,91 @@ body{
     background: #E32819;
 }
 .header__connect p{
+    margin: 37px 0 10px 0;
+    font-size: 37px;
     transform: rotate(-1.84deg);
 }
 .header__draw button{
     background: #FFFFFF;
     border: none;
     border-radius: 50px;
-    padding: 12px 31px;
+    padding: 12px 0;
     cursor:pointer;
+    width: 250px;
+    font-size: 18px;
 }
 .header__give{
     position: relative;
 }
-.header__give p{
-    margin: 0 0 40px 0;
+.header__give-p p{
+    margin: 25px 0 40px 0;
     font-size: 54px;
     transform: rotate(-1.54deg);
 }
+.header__give-p{
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 1.2s;
+}
+.header__give-p._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
 .header__arrow{
+    top: 10%;
     position: absolute;
+    transform: translate(50%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.8s;
+}
+.header__arrow._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.header__give-img{
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.4s;
+}
+.header__give-img._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.header__iphone{
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 1.6s;
+}
+.header__iphone._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 .header__iphone p{
+    margin: 42px 0 0 0;
     font-size: 42px;
     transform: rotate(-2.28deg);
 }
+.header__hyundai{
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 2.0s;
+}
+.header__hyundai._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
 .header__hyundai p{
+    margin: 20px 0 42px 0;
     font-size: 42px;
+}
+.header__btn{
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 2.4s;
+}
+.header__btn._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 .header__btn button{
     transition: all 0.3s ease 0s;
@@ -67,15 +131,35 @@ body{
     background: #E32819;
     color: #FFFFFF;
 }
+.header__group._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.header__group{
+    transform: translate(0, 25%);
+    opacity: 0;
+    transition: all 0.8s ease 2.8s;
+}
+.header__group img{
+    width: 780px;
+}
 /*main часть*/
 .main{
     margin: 90px 0 0 0;
 }
 .main__what__it__is{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap:wrap-reverse;
-    padding: 0 0 0 9%;
+}
+.main__about{
+    transform: translate(-25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.main__about._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 .main__about p{
     font-size: 26px;
@@ -87,16 +171,64 @@ body{
     font-weight: 800px;
     font-size: 69px;
     text-transform: uppercase;
+    font-family: "Avenir Next Cyr heavy";
 }
 .main__list ul{
     list-style: url(img/Ellipse.png);
+    font-size: 18px;
 }
 .main__list li{
     padding: 20px 0;
+    color:#2D3945;
 }
 .main__list li:last-child{
     font-family: "Avenir Next Cyr bold";
     color: #2D3945;
+}
+.main__list-1{
+    transform: translate(-25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.main__list-1._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.main__list-2{
+    transform: translate(-25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.4s;
+}
+.main__list-2._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.main__list-3{
+    transform: translate(-25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.6s;
+}
+.main__list-3._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.main__list-4{
+    transform: translate(-25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.8s;
+}
+.main__list-4._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.main__tv{
+    transform: translate(5%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.main__tv._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 .main__color{
     color: #2D3945;
@@ -106,18 +238,29 @@ body{
     font-size: 34px;
     color: #2D3945;
     margin: 125px 0 50px 0;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all 0.8s ease 0.4s;
+}
+.main__take__in._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 .main__take__in p{
+    font-size: 34px;
+    font-family: "Avenir Next Cyr heavy";
     color: #2D3945;
+    font-weight: 800;
 }
 .main__promotion{
     margin: 70px 0 0 0;
 }
 .main__conditions{
     display: flex;
+    font-size: 18px;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 15%;
+    padding: 0 24%;
     position: relative;
 }
 .main__color{
@@ -126,58 +269,103 @@ body{
 .main__arrow{
     position: absolute;
     top: 125%;
-    left: 20%;
+    left: 30%;
+    transform: translate(-25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.6s;
+}
+.main__arrow._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .main__first{
     background: url(img/1.png) no-repeat;
+    transform: translate(-25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.6s;
+}
+.main__first._active{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.main__first p{
+    padding: 10px 0 0 42px;
 }
 .main__second{
     background: url(img/2.png) no-repeat;
+    transform: translate(0, 25%);
+    opacity: 0;
+    transition: all 0.8s ease 0.6s;
+}
+.main__second._active{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.main__second p{
+    padding: 10px 0 0 55px;
 }
 .main__treeth{
     display: flex;
     align-items: center;
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.6s;
+}
+.main__treeth._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .main__treeth a{
     color: #CECECE;
     text-decoration: underline;
-    padding: 4px 0 0 5px;
+    padding: 4px 0 0 10px;
 }
 .main__reg{
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 108px auto;
-    width: 800px;
-    padding: 35px 10% 0;
+    width: 1052px;
+    padding: 35px 0 0;
     background: rgba(32, 190, 198, 0.1) ;
     border-radius: 20px;
-    height: 400px;
+    height: 448px;
 }
 .main__reg-left{
     background: #FFFFFF;
     border-radius: 20px;
-    padding: 15px 0;
+    padding: 15px 0 0;
     text-align: center;
     width: 400px;
-    margin: 0 0 90px 0;
+    margin: 0 0 40px 0;
 }
 .main__reg-left p{
+    margin: 16px 0 10px 0;
+    text-transform: uppercase;
     color: #15394C;
 }
 .main__input{
-    padding: 10px 30px 10px;
+    width: 259px;
+    height: 50px;
+    padding: 12px 14px 10px;
     border: 1px solid #15394C;
     box-sizing: border-box;
+    font-size: 24px;
     border-radius: 5px;
+    color: #15394C;
 }
 .main__btn-sign{
+    width: 250px;
+    height: 50px;
+    font-size: 18px;
+    font-family: "Avenir Next Cyr";
     background: #ec948e;
     color: #FFFFFF;
     border: none;
     border-radius: 50px;
     padding: 12px 65px;
     cursor:pointer;
-    margin: 18px 0 0 0;   
+    margin: 18px 0 24px 0;   
     transition: all 0.3s ease 0s;
 }
 .main__btn-sign:hover{
@@ -187,37 +375,63 @@ body{
 .main__btns{
     display: flex;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 0 17%;
 }
 .main__google{
     background: #DBDBDB;
     border: none;
     border-radius:5px;
-    padding: 10px 25px;
+    width: 80px;
+    height: 50px;
+    /*padding: 10px 25px;*/
     cursor: pointer;
 }
 .main__facebook{
-    padding: 8px 21px;
+    /*padding: 8px 21px;*/
+    width: 80px;
+    height: 50px;
     background: #1877F2;
     border: none;
     border-radius:5px;
     cursor: pointer;
 }
 .main__apple{
-    padding: 8px 21px;
+    width: 80px;
+    height: 50px;
+    /*padding: 8px 21px;*/
     background: #000000;
     border: none;
     border-radius:5px;
     cursor: pointer;
 }
 .main__reg-right{
-    padding: 0 0 0 50px;
+    padding: 92px 136px 0 25px;
+}
+.main__hidden-1{
+    display: none;
 }
 .main__reg-right p:first-child{
     color: #15394C;
-    font-family: "Avenir Next Cyr bold";
+    font-family: "Avenir Next Cyr heavy";
     font-size: 24px;
     font-weight: 800;
+}
+.main__reg p:nth-child(2){
+    color: #15394C;
+    font-size: 24px;
+}
+.main__abs{
+    position: absolute;
+    right: 0;
+    bottom: -54px;
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.6s;
+}
+.main__abs._active{
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: all 0.8s ease 0.2s;
 }
 .main__time{
     background: url(img/bg2.png) no-repeat;
@@ -225,6 +439,13 @@ body{
 .main__clock{
     display: flex;
     justify-content: center;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all 0.8s ease 0.4s;
+}
+.main__clock._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .main__clock p{
     font-size: 13px;
@@ -239,9 +460,15 @@ body{
     border-radius: 50%;
     position: absolute;
     top: 30%;
-    right: 47%;
-    transform: rotate(64deg);
+    right: 46%;
     z-index: 0;
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.main__oval._active{
+    transform: translate(0, 0) rotate(64deg);
+    opacity: 1;
 }
 .main__oval p{
     border: 0.5px solid #ffffff;
@@ -251,6 +478,7 @@ body{
     padding: 5% 0;
     font-size: 15px;
     font-weight: normal;
+    font-family: "Avenir Next Cyr thin"; 
 }
 .main__oval-2 p{
     border: 0.5px solid #ffffff;
@@ -259,7 +487,7 @@ body{
     border-radius: 50%;
     padding: 5% 0;
     font-size: 15px;
-    font-family: "Avenir Next Cyr"; 
+    font-family: "Avenir Next Cyr thin"; 
 }
 .main__oval-2{
     width: 148px;
@@ -268,13 +496,19 @@ body{
     border-radius: 50%;
     position: absolute;
     top: 15%;
-    right: 31%;
-    transform: rotate(-30deg);
+    right: 32%;
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.main__oval-2._active{
+    transform: translate(0, 0) rotate(-30deg);
+    opacity: 1;
 }
 .main__img{
     display: flex;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 0 17% 0 0;
     position: relative;
 }
 .main__man,
@@ -286,23 +520,59 @@ body{
 .main__car{
     z-index: 3;
     position: relative;
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.main__car._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .main__phone{
     z-index: 1;
     right: 38%;
     bottom: 21%;
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.main__phone._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .main__back{
     right: 40%;
     bottom: 34%;
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.main__back._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .main__man{
     z-index: 1;
-    bottom: 32%;
+    bottom: 116px;
     left: 16%;
+    transform: translate(-25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.main__man._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .main__woman{
-    bottom: 32%;
+    left: 11%;
+    bottom: 116px;
+    transform: translate(-25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.main__woman._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .main__timer{
     text-align: center;
@@ -316,12 +586,27 @@ body{
     font-family: "Avenir Next Cyr bold";
     margin: 60px 0 32px;
 }
-.main__cont p:nth-child(2){
+.main__p-second{
     font-size: 24px;
     padding: 0 0 20px 0;
-}
-.main__cont p{
     font-family: "Avenir Next Cyr bold";
+    transform: translate(0, -25%);
+    opacity: 0;
+    transition: all 0.8s ease 0.2s;
+}
+.main__p-second._active{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.main__p-first{
+    font-family: "Avenir Next Cyr heavy";
+    transform: translate(0, -25%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.main__p-first._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .main__clock span{
     color: #FFFFFF;
@@ -335,30 +620,34 @@ body{
     font-size: 24px;
     border-radius: 3px;
 }
+.main__visible{
+    display: none;
+}
 /*footer часть*/
 footer{
-    margin: 195px 0 0 0;
+    margin: 60px 0 0 0;
 }
 .footer__bg{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
-    padding: 0 10% 0 0;
+    padding: 0 0 0 25%;
 }
-.footer__elka{
-    position: absolute;
-    z-index: 1;
-    left: 4%;
+.footer__txt{
+    position: relative;
+    padding: 5% 0 0 0;
+    z-index:1;
+    transform: translate(25%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
 }
-.footer__car{
-    position: absolute;
-    z-index: 2;
-    top: 107%;
-    left: 19%;
+.footer__txt._active{
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .footer__txt p{
     font-size: 40px;
-    font-family: "Avenir Next Cyr bold";
+    font-family: "Avenir Next Cyr heavy";
     color: #2D3945;
 }
 .footer__btn{
@@ -374,8 +663,9 @@ footer{
     background: #2a9610;
 }
 .footer__mountain{
+    z-index: 0;
     position: relative;
-    height: 512px;
+    height: 420px;
 }
 .footer__mountain-1,
 .footer__mountain-2{
@@ -383,26 +673,188 @@ footer{
 }
 .footer__mountain-1{
     width: 100%;
+    bottom: -7%;
 }
 .footer__mountain-2{
-    top: 116px;
     width: 100%;
+    top: 5%;
 }
 .footer__rights{
+    position: relative;
     text-align: center;
+    transform: translate(0, 25%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.footer__rights._active{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.footer__rights p{
+    font-size: 18px;
+    margin: 16px 0 50px 0;
+}
+.footer__elka-hidden{
+    display: none;
+}
+@media(max-width:1920px){
+    .footer__elka{
+        position: absolute;
+        z-index: 1;
+        left: 14%;
+        transform: translate(-25%, 0);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
+    }
+    .footer__elka._active{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    .footer__car{
+        position: absolute;
+        z-index: 2;
+        top: 80%;
+        left: 26%;
+        transform: translate(-25%, 0);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
+    }
+    .footer__car._active{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+@media(max-width:1767px){
+    .main__img{
+        padding: 0 15% 0 0;
+    }
+}
+@media(max-width:1675px){
+    .footer__mountain-1{
+        bottom: 5%;
+    }
+}
+@media(max-width:1655px){
+    .main__conditions{
+        padding: 0 18%;
+    }
+}
+@media(max-width:1577px){
+    .main__img{
+        padding: 0 12% 0 0;
+    }
+    .main__oval{
+        right: 48%;
+    }
+    .main__oval-2{
+        right: 31%;
+    }
+}
+@media(max-width:1585px){
+    .footer__elka{
+        left: 0;
+    }
+    .footer__car{
+        top: 88%;
+        left: 15%;
+    }
+    .footer__mountain-1{
+        bottom: 10%;
+    }
+    .header__group{
+        transition: all 0.8s ease 0s;
+    }
+}
+@media(max-width:1440px){
+    .main__tv{
+        transform: translate(5px, 0);
+    }
+    .main__conditions{
+        padding: 0 15%;
+    }
+    .main__woman{
+        left: 10%;
+    }
+    .main__img{
+        padding: 0 10% 0 0;
+    }
+    .footer__mountain-1{
+        bottom: 20%;
+    }
+    .header__connect{
+        transform: translate(30px, 0);
+    }
+    .header__give-img{
+        transform: translate(30px, 0);
+    }
+    .header__arrow{
+        transform: translate(30px, 0);
+    }
+    .header__give-p{
+        transform: translate(30px, 0);
+    }
+    .header__iphone{
+        transform: translate(30px, 0);
+    }
+    .header__hyundai{
+        transform: translate(30px, 0);
+    }
+    .header__btn{
+        transform: translate(30px, 0);
+    }
+    .main__woman,
+    .main__man{
+        transform: translate(-30px, 0);
+    }
+    .main__abs{
+        transform: translate(10px, 0);
+    }
+    .main__oval,
+    .main__oval-2,
+    .main__phone,
+    .main__back,
+    .main__car{
+        transform: translate(30px, 0);
+    }
+    .footer__txt{
+        transform: translate(30px, 0);
+    }
+    .footer__elka,
+    .footer__car{
+        transform: translate(-30px, 0);
+    }
 }
 @media(max-width:1434px){
     .main__tv img{
-        width: 600px;
+        width: 700px;
+    }
+}
+@media(max-width:1331px){
+    .main__img{
+        padding: 0 7% 0 0;
+    }
+    .main__oval-2{
+        right: 29%;
+    }
+}
+@media(max-width:1216px){
+    .main__oval{
+        right: 49%;
+    }
+    .main__img{
+        padding: 0 4% 0 0;
+    }
+    .footer__mountain-1{
+        bottom: 30%;
     }
 }
 @media(max-width:1188px){
-    .main__tv img{
-        width: 475px;
-    }
     .main__conditions{
         margin: 0 auto;
         width: 400px;
+    }
+    .main__take__in{
+        margin: 60px 0 50px 0;
     }
     .main__first{
         margin: 40px 0 50px;
@@ -413,49 +865,40 @@ footer{
     .main__arrow{
         display: none;
     }
-
-}
-@media(max-width:1011px){
-    .main__reg{
-        justify-content: center;
-
-    }
-    .main__what__it__is{
-        justify-content: center;
-    }
-    .main__reg{
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 400px;
-        height: 740px;
-    }
-    .main__reg-right{
-        text-align: center;
-        padding: 0;
-    }
-    .main__reg-right img{
-        width: 292px;
+    .main__hidden-2{
+        display: none;
     }
 }
-@media(max-width:1026px){
+@media(max-width:1164px){
+    .header{
+        height: 795px;
+    }
     .header__group img{
-        width: 322px;
+        width: 530px;
+    }
+    .main{
+        margin: 180px 0 0 0;
     }
     .main__img{
         justify-content: center;
-        padding: 14% 10% 0;
+        padding: 155px 10% 0;
     }
     .main__woman{
         bottom: 26%;
-        left: 33%;
-        transform: rotate(-13deg);
+        left: 34%;
         width: 138px;
+    }
+    .main__woman._active{
+        transform: translate(0, 0) rotate(-13deg);
     }
     .main__man{
         width: 164px;
         bottom: 23%;
         left:  49%;
         transform: rotate(10deg);
+    }
+    .main__man._active{
+        transform: translate(0, 0) rotate(10deg);
     }
     .main__phone{
         right: 50%;
@@ -473,19 +916,25 @@ footer{
     .main__cont p{
         font-size: 24px;
     }
+    .main__p-second{
+        font-size: 18px;
+    }
+    .footer{
+        margin: 0;
+    }
     .footer__bg{
         justify-content: center;
         padding: 0;
         text-align: center;
     }
     .footer__elka{
-        left: 7%;
+        left: 33%;
         top: 115%;
         width: 310px;
     }
     .footer__car{
-        top: 192%;
-        left: 19%;
+        top: 176%;
+        left: 44%;
         width: 282px;
     }
     .footer__mountain{
@@ -495,9 +944,11 @@ footer{
     .main__oval{
         width: 111px;
         height: 36px;
-        top: 4%;
-        right: 41%;
-        transform: rotate(2deg);
+        top: 6%;
+        right: 40%;
+    }
+    .main__oval._active{
+        transform: translate(0, 0) rotate(2deg);
     }
     .main__oval p{
         margin: 3px -5px;
@@ -508,77 +959,218 @@ footer{
         height: 36px;
         top: 20%;
         right: 49%;
-        transform: rotate(39deg);
+    }
+    .main__oval-2._active{
+        transform: translate(0, 0) rotate(39deg);
     }
     .main__oval-2 p{
         margin: 2px -5px;
         width: 119px;
     }
 }
-@media(max-width:870px){
-    .main__img{
-        padding: 17% 10% 0;
+@media(max-width:1194px){
+    .main__what__it__is{
+        margin: 0 auto;
+        width: 400px;
     }
+    .main__visible{
+        display: block;
+    }
+}
+@media(max-width:1188px){
+    .main__treeth{
+        padding: 0 0 0 75px;
+    }
+}
+@media(max-width:1066px){
+    .main__hidden{
+        display: none;
+    }
+    .main__reg{
+        padding: 30px 16px 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 400px;
+        height: 830px;
+    }
+    .main__reg-right p:first-child{
+        font-size: 18px;
+    }
+    .main__reg p:nth-child(2){
+        font-size: 16px;
+    }
+    .main__reg-left{
+        height: 373px;
+    }
+    .main__reg-left p{
+        text-transform: none;
+    }
+    .main__reg-right{
+        height: 500px;
+        text-align: center;
+        padding: 0;
+    }
+    .main__hidden-1{
+        display: block;
+    }
+    .main__reg-right img{
+        width: 292px;
+    }
+    .main__abs{
+        right: 10px;
+        bottom:-11%;
+    }
+}
+@media(max-width:1011px){
+    .main__what__it__is{
+        justify-content: center;
+    }
+    .footer__mountain-2{
+        top: 16%;
+    }
+}
+@media(max-width:990px){
+    .footer__car{
+        left: 42%;
+        top: 177%;
+    }
+    .footer__elka{
+        left: 29%;
+    }
+}
+@media(max-width:940px){
     .main__man{
         left:50%;
     }
     .main__woman{
-        left: 29%;
+        left: 30%;
+    }
+}
+@media(max-width:865px){
+    .footer__elka{
+        left: 27%;
+    }
+    .footer__mountain-2{
+        top: 26%;
+    }
+    .footer__car{
+        top: 179%;
+    }
+}
+@media(max-width:796px){
+    .header__connect{
+        transform: translate(5%, 0);
+    }
+    .header__give-img{
+        transform: translate(5%, 0);
+    }
+    .header__arrow{
+        transform: translate(5%, 0);
+    }
+    .header__give-p{
+        transform: translate(5%, 0);
+    }
+    .header__iphone{
+        transform: translate(5%, 0);
+    }
+    .header__hyundai{
+        transform: translate(5%, 0);
+    }
+    .header__btn{
+        transform: translate(5%, 0);
+    }
+    .main__tv{
+        transform: translate(0, 0);
+    }
+    .main__about{
+        transform: translate(-5%, 0);
+    }
+    .main__list-1,
+    .main__list-2,
+    .main__list-3,
+    .main__list-4{
+        transform: translate(-5%, 0);
+    }
+    .main__first,
+    .main__second,
+    .main__treeth{
+        transform: translate(0, 0);
+    }
+    .main__abs{
+        transform: translate(5%, 0);
+    }
+    .main__p-first,
+    .main__p-second{
+        transform: translate(0, -5%);
+    }
+    .main__woman,
+    .main__man{
+        transform: translate(-5%, 0);
+    }
+    .main__oval,
+    .main__oval-2,
+    .main__phone,
+    .main__back,
+    .main__car{
+        transform: translate(5%, 0);
+    }
+    .footer__txt{
+        transform: translate(5%, 0);
+    }
+    .footer__elka,
+    .footer__car{
+        transform: translate(-5%, 0);
     }
 }
 @media(max-width:745px){
-    .main__img{
-        padding: 19% 10% 0;
+    .main__tv img{
+        width: 412px;
+    }
+    .main__oval{
+        right: 36%;
     }
     .main__woman{
         left: 26%;
     }
+    .footer__mountain-2{
+        top: 36%;
+    }
+    .footer__elka{
+        left: 25%;
+    }
 }
 @media(max-width:630px){
-    .main__img{
-        padding: 23% 10% 0;
-    }
     .main__woman{
         left: 22%;
     }
 }
-@media(max-width:550px){
-    .main__img{
-        padding: 26% 10% 0;
-    }
-    .main__woman{
-        left: 18%;
-    }
-}
-@media(max-width:462px){
-    .main__img{
-        padding: 30% 10% 0;
-    }
-    .main__oval{
-        right: 29%;
-    }
-    .main__woman{
-        left: 12%;
-    }
-}
 @media(max-width:614px){
+    .header{
+        height: 688px;
+    }
+    .header__cont{
+        padding: 20px 0 0 0;
+    }
+    .header__hidden{
+        display: block;
+    }
     .header__connect p{
-        font-size: 14px;
+        font-size: 18px;
     }
     .header__give img:first-child{
         width: 156px;
     }
     .header__arrow{
         width: 54px;
+        top: 23%;
     }
     .header__give p{
         font-size: 30px;
+        margin: 25px 0 0 0;
     }
     .header__iphone p{
         font-size: 24px;
-    }
-    .header__hyundai{
-        margin: 32px 0 0 0;
+        margin: 18px 0 0 0;
     }
     .header__hyundai p{
         font-size: 24px;
@@ -586,6 +1178,63 @@ footer{
     }
     .footer__txt p{
         font-size: 24px;
+    }
+    .footer__car{
+        top: 375px;
+        left: 10%;
+    }
+    .footer__mountain-2{
+        top: 46%;
+    }
+    .footer__elka{
+        display: none;
+    }
+    .footer__elka-hidden{
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 115%;
+        left: 0;
+    }
+}
+@media(max-width:585px){
+    .header__connect{
+        transform: translate(5px, 0);
+    }
+    .header__give-img{
+        transform: translate(5px, 0);
+    }
+    .header__give-p{
+        transform: translate(5px, 0);
+    }
+    .header__iphone{
+        transform: translate(5px, 0);
+    }
+    .header__hyundai{
+        transform: translate(5px, 0);
+    }
+    .header__btn{
+        transform: translate(5px, 0);
+    }
+    .header__arrow{
+        transform: translate(0, 0);
+    }
+    .header__btn{
+        transform: translate(0, 0);
+    }
+    .header__group{
+        transform: translate(0, 10px);
+    }
+}
+@media(max-width:550px){
+    .main__treeth{
+        padding: 0 0 0 40px;
+    }
+    .main__oval{
+        right: 32%;
+    }
+    .main__woman{
+        left: 18%;
     }
 }
 @media(max-width:571px){
@@ -597,7 +1246,17 @@ footer{
     }
     .main__reg{
         width: 300px;
-        padding: 35px 3% 0;
+        height: 754px;
+    }
+    .main__btns{
+        padding: 0 6%;
+    }
+    .main__abs{
+        right: 20px;
+        bottom: -8%;
+    }
+    .main__abs img{
+        width: 292px;
     }
     .main__conditions{
         width: 300px;
@@ -606,17 +1265,52 @@ footer{
     .footer{
         margin: 75px 0 0 0;
     }
-    .footer__elka{
-        left: 0;
+}
+@media(max-width:530px){
+    .header{
+        height: 588px;
+    }
+    .header__cont{
+        padding: 20px 0 0 0;
+    }
+    .header__group img{
+        width: 322px;
+    }
+    .main{
+        margin: 120px 0 0 0;
+    }
+    .main__hidden{
+        display: none;
+    }
+}
+@media(max-width:462px){
+    .main__oval{
+        right: 29%;
+    }
+    .main__woman{
+        left: 12%;
+    }
+    .footer__mountain-2{
+        top: 50%;
     }
     .footer__car{
-        top: 228%;
-        left: -4%;
+        top: 370px;
+    }
+    .main__txt{
+        font-size: 50px;
+    }
+    .main__about p{
+        font-size: 20px;
+    }
+}
+@media(max-width:413px){
+    .main__what__it__is{
+        width: 325px;
     }
 }
 @media(max-width:380px){
-    .main__img{
-        padding: 40% 10% 0;
+    .main__oval{
+        right: 24%;
     }
     .main__woman{
         left: 2%;
@@ -631,6 +1325,18 @@ footer{
 @font-face {
     font-family: "Avenir Next Cyr"; 
     src: url("fonts/AvenirNextCyr-Medium.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+@font-face {
+    font-family: "Avenir Next Cyr thin"; 
+    src: url("fonts/AvenirNextCyr-Thin.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+@font-face {
+    font-family: "Avenir Next Cyr heavy"; 
+    src: url("fonts/AvenirNextCyr-Heavy.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 }
